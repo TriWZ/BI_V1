@@ -34,10 +34,10 @@ kpi4.metric("Total CO₂ (tons)", f"{df_filtered['CO₂ Emissions (tons)'].sum()
 # --- Trend Charts ---
 st.markdown("### Monthly Trends by Building")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Electricity", "CO₂ Emissions", "Water", "Gas"])
+tab1, tab2, tab3, tab4 = st.tabs(["Gas", "CO₂ Emissions", "Electricity", "Water"])
 
 with tab1:
-    fig1 = px.line(df_filtered, x="Month", y="Electricity (kWh)", color="Building", markers=True)
+    fig1 = px.line(df_filtered, x="Month", y="Gas (m³)", color="Building", markers=True)
     st.plotly_chart(fig1, use_container_width=True)
 
 with tab2:
@@ -45,7 +45,7 @@ with tab2:
     st.plotly_chart(fig2, use_container_width=True)
 
 with tab3:
-    fig3 = px.line(df_filtered, x="Month", y="Gas (m³)", color="Building", markers=True)
+    fig3 = px.line(df_filtered, x="Month", y="Electricity (kWh)", color="Building", markers=True)
     st.plotly_chart(fig3, use_container_width=True)
 
 with tab4:
