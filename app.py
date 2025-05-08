@@ -34,7 +34,7 @@ kpi4.metric("Total CO₂ (tons)", f"{df_filtered['CO₂ Emissions (tons)'].sum()
 # --- Trend Charts ---
 st.markdown("### Monthly Trends by Building")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Water", "Gas", "Electricity", "CO₂ Emissions"])
+tab1, tab2, tab3, tab4 = st.tabs(["Gas", "Water", "Electricity", "CO₂ Emissions"])
 
 with tab1:
     fig1 = px.scatter(df_filtered, x="Month", y="Water (tons)", color="Building", size="Water (tons)", hover_name="Building")
