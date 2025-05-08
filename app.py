@@ -46,11 +46,11 @@ with tab2:
 
 with tab3:
     fig3 = px.line(df_filtered, x="Month", y="Gas (m³)", color="Building", markers=True)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig3, use_container_width=True)
 
 with tab4:
     fig4 = px.line(df_filtered, x="Month", y="Water (tons)", color="Building", markers=True)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig4, use_container_width=True)
 
 # --- Raw Data Table ---
 st.markdown("### Raw Utility Data")
