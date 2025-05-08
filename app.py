@@ -49,7 +49,7 @@ with tab3:
     st.plotly_chart(fig3, use_container_width=True)
 
 with tab4:
-    fig4 = px.line(df_filtered, x="Month", y="Water (tons)", color="Building", markers=True)
+    fig4 = px.scatter(df_filtered, x="Month", y="Water (tons)", color="Building", size="Water (tons)", hover_name="Building")
     st.plotly_chart(fig4, use_container_width=True)
 
 # --- Raw Data Table ---
