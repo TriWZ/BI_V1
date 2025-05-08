@@ -37,11 +37,11 @@ st.markdown("### Monthly Trends by Building")
 tab1, tab2, tab3, tab4 = st.tabs(["Gas", "Water", "Electricity", "CO₂ Emissions"])
 
 with tab1:
-    fig1 = px.scatter(df_filtered, x="Month", y="Water (tons)", color="Building", size="Water (tons)", hover_name="Building")
+    fig1 = px.line(df_filtered, x="Month", y="Gas (m³)", color="Building", markers=True)
     st.plotly_chart(fig1, use_container_width=True)
 
 with tab2:
-    fig2 = px.line(df_filtered, x="Month", y="Gas (m³)", color="Building", markers=True)
+    fig2 = px.scatter(df_filtered, x="Month", y="Water (tons)", color="Building", size="Water (tons)", hover_name="Building")
     st.plotly_chart(fig2, use_container_width=True)
 
 with tab3:
